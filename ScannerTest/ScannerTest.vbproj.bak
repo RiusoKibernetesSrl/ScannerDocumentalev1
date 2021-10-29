@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6847B3D2-1A94-4E00-946E-95A3C246B6C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ScannerTest</RootNamespace>
+    <AssemblyName>ScannerTest</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <StartupObject>ScannerTest.Program</StartupObject>
+    <FileAlignment>512</FileAlignment>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MyType>WindowsForms</MyType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ScannerTest.My.MyApplication</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v19.2" />
+    <Reference Include="DevExpress.Data.v19.2" />
+    <Reference Include="DevExpress.Printing.v19.2.Core" />
+    <Reference Include="DevExpress.Utils.v19.2" />
+    <Reference Include="DevExpress.XtraBars.v19.2" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core" />
+    <Reference Include="DevExpress.XtraEditors.v19.2" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TwainDotNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d3cd6e1539fa8c71" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmParametriScanner.Designer.vb">
+      <DependentUpon>frmParametriScanner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmParametriScanner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="Parametri\Parametro.vb" />
+    <Compile Include="Parametri\ParametroDati.vb" />
+    <Compile Include="Program.vb" />
+    <Compile Include="ProgressControl.Designer.vb">
+      <DependentUpon>ProgressControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgressForm.Designer.vb">
+      <DependentUpon>ProgressForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScannerViewerData.vb" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmParametriScanner.resx">
+      <DependentUpon>frmParametriScanner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ProgressForm.resx">
+      <DependentUpon>ProgressForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon\AddFile_16x16.png" />
+    <Content Include="Icon\AddFile_32x32.png" />
+    <Content Include="Icon\AddFolder_16x16.png" />
+    <Content Include="Icon\AddFolder_32x32.png" />
+    <Content Include="Icon\AddToAlbum_16x16.png" />
+    <Content Include="Icon\AddToAlbum_32x32.png" />
+    <Content Include="Icon\AddToLibrary_16x16.png" />
+    <Content Include="Icon\AddToLibrary_32x32.png" />
+    <Content Include="Icon\Album_16x16.png" />
+    <Content Include="Icon\Album_32x32.png" />
+    <Content Include="Icon\Back_16x16.png" />
+    <Content Include="Icon\Back_32x32.png" />
+    <Content Include="Icon\Cancel_16x16.png" />
+    <Content Include="Icon\Cancel_32x32.png" />
+    <Content Include="Icon\Close_16x16.png" />
+    <Content Include="Icon\Close_32x32.png" />
+    <Content Include="Icon\Collage_16x16.png" />
+    <Content Include="Icon\Collage_32x32.png" />
+    <Content Include="Icon\ColorMixer_16x16.png" />
+    <Content Include="Icon\ColorMixer_32x32.png" />
+    <Content Include="Icon\Edit_16x16.png" />
+    <Content Include="Icon\Edit_32x32.png" />
+    <Content Include="Icon\EMail_16x16.png" />
+    <Content Include="Icon\EMail_32x32.png" />
+    <Content Include="Icon\Export_16x16.png" />
+    <Content Include="Icon\Export_32x32.png" />
+    <Content Include="Icon\Film_16x16.png" />
+    <Content Include="Icon\Film_32x32.png" />
+    <Content Include="Icon\FilterSample.png" />
+    <Content Include="Icon\Filter_16x16.png" />
+    <Content Include="Icon\Filter_32x32.png" />
+    <Content Include="Icon\Folder_16x16.png" />
+    <Content Include="Icon\Folder_32x32.png" />
+    <Content Include="Icon\Forward_16x16.png" />
+    <Content Include="Icon\Forward_32x32.png" />
+    <Content Include="Icon\GenerateData_16x16.png" />
+    <Content Include="Icon\GenerateData_32x32.png" />
+    <Content Include="Icon\Help_16x16.png" />
+    <Content Include="Icon\Help_32x32.png" />
+    <Content Include="Icon\ItemMarked_16x16.png" />
+    <Content Include="Icon\ItemMarked_32x32.png" />
+    <Content Include="Icon\Library_16x16.png" />
+    <Content Include="Icon\Library_32x32.png" />
+    <Content Include="Icon\Mark_16x16.png" />
+    <Content Include="Icon\Mark_32x32.png" />
+    <Content Include="Icon\NewAlbum_16x16.png" />
+    <Content Include="Icon\NewAlbum_32x32.png" />
+    <Content Include="Icon\Other_16x16.png" />
+    <Content Include="Icon\Other_32x32.png" />
+    <Content Include="Icon\Print_16x16.png" />
+    <Content Include="Icon\Print_32x32.png" />
+    <Content Include="Icon\RemoveAlbum_16x16.png" />
+    <Content Include="Icon\RemoveAlbum_32x32.png" />
+    <Content Include="Icon\RemoveFolder_16x16.png" />
+    <Content Include="Icon\RemoveFolder_32x32.png" />
+    <Content Include="Icon\RemoveFromAlbum_16x16.png" />
+    <Content Include="Icon\RemoveFromAlbum_32x32.png" />
+    <Content Include="Icon\Remove_16x16.png" />
+    <Content Include="Icon\Remove_32x32.png" />
+    <Content Include="Icon\Save_16x16.png" />
+    <Content Include="Icon\Save_32x32.png" />
+    <Content Include="Icon\SelectAllMarked_16x16.png" />
+    <Content Include="Icon\SelectAllMarked_32x32.png" />
+    <Content Include="Icon\Slideshow_16x16.png" />
+    <Content Include="Icon\Slideshow_32x32.png" />
+    <Content Include="Icon\Tile.png" />
+    <Content Include="Icon\Undo_16x16.png" />
+    <Content Include="Icon\Undo_32x32.png" />
+    <Content Include="Icon\UnmarkAll_16x16.png" />
+    <Content Include="Icon\UnmarkAll_32x32.png" />
+    <Content Include="Icon\Unmark_16x16.png" />
+    <Content Include="Icon\Unmark_32x32.png" />
+    <Content Include="Icon\Upload_16x16.png" />
+    <Content Include="Icon\Upload_32x32.png" />
+    <Content Include="Icon\View_16x16.png" />
+    <Content Include="Icon\View_32x32.png" />
+    <None Include="Resources\View_32x32.png" />
+    <None Include="Resources\View_16x16.png" />
+    <None Include="Resources\Upload_32x32.png" />
+    <None Include="Resources\Upload_16x16.png" />
+    <None Include="Resources\UnmarkAll_32x32.png" />
+    <None Include="Resources\UnmarkAll_16x16.png" />
+    <None Include="Resources\Unmark_32x32.png" />
+    <None Include="Resources\Unmark_16x16.png" />
+    <None Include="Resources\Undo_32x32.png" />
+    <None Include="Resources\Undo_16x16.png" />
+    <None Include="Resources\Tile.png" />
+    <None Include="Resources\Slideshow_32x32.png" />
+    <None Include="Resources\Slideshow_16x16.png" />
+    <None Include="Resources\SelectAllMarked_32x32.png" />
+    <None Include="Resources\SelectAllMarked_16x16.png" />
+    <None Include="Resources\Save_32x32.png" />
+    <None Include="Resources\Save_16x16.png" />
+    <None Include="Resources\RemoveFromAlbum_32x32.png" />
+    <None Include="Resources\RemoveFromAlbum_16x16.png" />
+    <None Include="Resources\RemoveFolder_32x32.png" />
+    <None Include="Resources\RemoveFolder_16x16.png" />
+    <None Include="Resources\RemoveAlbum_32x32.png" />
+    <None Include="Resources\RemoveAlbum_16x16.png" />
+    <None Include="Resources\Remove_32x32.png" />
+    <None Include="Resources\Remove_16x16.png" />
+    <None Include="Resources\Print_32x32.png" />
+    <None Include="Resources\Print_16x16.png" />
+    <None Include="Resources\Other_32x32.png" />
+    <None Include="Resources\Other_16x16.png" />
+    <None Include="Resources\NewAlbum_32x32.png" />
+    <None Include="Resources\NewAlbum_16x16.png" />
+    <None Include="Resources\Mark_32x32.png" />
+    <None Include="Resources\Mark_16x16.png" />
+    <None Include="Resources\Library_32x32.png" />
+    <None Include="Resources\Library_16x16.png" />
+    <None Include="Resources\ItemMarked_32x32.png" />
+    <None Include="Resources\ItemMarked_16x16.png" />
+    <None Include="Resources\Help_32x32.png" />
+    <None Include="Resources\Help_16x16.png" />
+    <None Include="Resources\GenerateData_32x32.png" />
+    <None Include="Resources\GenerateData_16x16.png" />
+    <None Include="Resources\Forward_32x32.png" />
+    <None Include="Resources\Forward_16x16.png" />
+    <None Include="Resources\Folder_32x32.png" />
+    <None Include="Resources\Folder_16x16.png" />
+    <None Include="Resources\FilterSample.png" />
+    <None Include="Resources\Filter_32x32.png" />
+    <None Include="Resources\Filter_16x16.png" />
+    <None Include="Resources\Film_32x32.png" />
+    <None Include="Resources\Film_16x16.png" />
+    <None Include="Resources\Export_32x32.png" />
+    <None Include="Resources\Export_16x16.png" />
+    <None Include="Resources\EMail_32x32.png" />
+    <None Include="Resources\EMail_16x16.png" />
+    <None Include="Resources\Edit_32x32.png" />
+    <None Include="Resources\Edit_16x16.png" />
+    <None Include="Resources\ColorMixer_32x32.png" />
+    <None Include="Resources\ColorMixer_16x16.png" />
+    <None Include="Resources\Collage_32x32.png" />
+    <None Include="Resources\Collage_16x16.png" />
+    <None Include="Resources\Close_32x32.png" />
+    <None Include="Resources\Close_16x16.png" />
+    <None Include="Resources\Cancel_32x32.png" />
+    <None Include="Resources\Cancel_16x16.png" />
+    <None Include="Resources\Back_32x32.png" />
+    <None Include="Resources\Back_16x16.png" />
+    <None Include="Resources\Album_32x32.png" />
+    <None Include="Resources\Album_16x16.png" />
+    <None Include="Resources\AddToLibrary_32x32.png" />
+    <None Include="Resources\AddToLibrary_16x16.png" />
+    <None Include="Resources\AddToAlbum_32x32.png" />
+    <None Include="Resources\AddToAlbum_16x16.png" />
+    <None Include="Resources\AddFolder_32x32.png" />
+    <None Include="Resources\AddFolder_16x16.png" />
+    <None Include="Resources\AddFile_32x32.png" />
+    <None Include="Resources\AddFile_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ScannerLibrary\Kibernetes.Services.ScannerLibrary.csproj">
+      <Project>{f61cf832-b300-41bd-b19c-e61b7aca6068}</Project>
+      <Name>Kibernetes.Services.ScannerLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
